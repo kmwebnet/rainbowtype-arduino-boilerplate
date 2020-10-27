@@ -1,0 +1,49 @@
+# rainbowtype-arduino-boilerplate
+boilerplate for rainbowtype IoT secure prototyping system
+
+# Requirements
+
+  Arduino IDE environment (tested 1.8.13) .
+
+  and you must copy "cert_chain.c" which you have generated one. 
+
+  you need to modify the constants which you already have as follows:  
+  ```
+  mqttClient.setServer("XXXXXXXXXXXXX-ats.iot.us-east-1.amazonaws.com", 8883);
+  ```
+
+# Environment reference
+  
+  Espressif ESP32-DevkitC
+  this project initialize both of I2C 0,1 port, and the device on I2C port 0 is absent.  
+  pin assined as below:
+
+      I2C 1 SDA GPIO_NUM_21
+      I2C 1 SCL GPIO_NUM_22
+          
+  Microchip ATECC608A(on I2C port 1)  
+  This code currently not supported TRUST&GO and TRUSTFLEX versions.  
+
+# Usage
+
+Once you do download as ZIP, you need to add it as library on Arduino IDE.    
+
+# Run this project
+
+
+# Result
+
+If you run this project with success, you can find the results on serial console as follows:
+
+```
+..
+   Connected.  
+Attempting MQTT connection...Connected.  
+Subscribed.  
+
+```
+You can also recieve a message from "test" page on AWS IoT console  
+
+# License
+
+This software includes open source software. These open source software are subject to the applicable license terms for each open source software. The license terms, copyright notices, and other detailed license information for such open source software can be found in each source code.
