@@ -22,6 +22,9 @@ boilerplate for rainbowtype IoT secure prototyping system
       I2C 1 SCL GPIO_NUM_22
           
   Microchip ATECC608A(on I2C port 1)  
+
+  you can change pin setting on  Wire.begin(21 ,22); on cryptoauthlib/i2c_arduino.cpp  
+
   This code currently not supported TRUST&GO and TRUSTFLEX versions.  
 
 # Usage

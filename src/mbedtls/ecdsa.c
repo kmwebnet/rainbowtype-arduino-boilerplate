@@ -584,6 +584,20 @@ int mbedtls_ecdsa_sign_det_ext( mbedtls_ecp_group *grp, mbedtls_mpi *r,
 }
 #endif /* MBEDTLS_ECDSA_DETERMINISTIC */
 
+int mbedtls_ecdsa_can_do( mbedtls_ecp_group_id gid )
+{
+    switch( gid )
+    {
+#ifdef MBEDTLS_ECP_DP_CURVE25519_ENABLED
+        case MBEDTLS_ECP_DP_CURVE25519: return 0;
+#endif
+#ifdef MBEDTLS_ECP_DP_CURVE448_ENABLED
+        case MBEDTLS_ECP_DP_CURVE448: return 0;
+#endif
+    default: return 1;
+    }
+}
+
 #if !defined(MBEDTLS_ECDSA_VERIFY_ALT)
 /*
  * Verify ECDSA signature of hashed message (SEC1 4.1.4)

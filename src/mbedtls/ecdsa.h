@@ -74,7 +74,6 @@ extern "C" {
 #define MBEDTLS_ECDH_GEN_PUBLIC_ALT 
 #define MBEDTLS_ECDH_COMPUTE_SHARED_ALT 
 #define MBEDTLS_ECDSA_SIGN_ALT 
-#define MBEDTLS_ECDSA_VERIFY_ALT
 
 /**
  * \brief           The ECDSA context structure.

@@ -80,7 +80,7 @@ ATCA_STATUS hal_i2c_send(ATCAIface iface, uint8_t word_address, uint8_t *txdata,
     if (Wire.write(txdata,txlength) != txlength) {
         result = ATCA_COMM_FAIL;
     }
-    Wire.endTransmission();
+    Wire.endTransmission(true);
 
   return result;
 }
